@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS app_users (
+    id VARCHAR(80) PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(40) NOT NULL,
+    data LONGTEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS projects (
+    id VARCHAR(80) PRIMARY KEY,
+    student_id VARCHAR(80) NOT NULL,
+    status VARCHAR(40) NOT NULL,
+    submitted_at VARCHAR(80),
+    data LONGTEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS error_logs (
+    id VARCHAR(80) PRIMARY KEY,
+    resolved BOOLEAN NOT NULL DEFAULT FALSE,
+    timestamp VARCHAR(80) NOT NULL,
+    data LONGTEXT NOT NULL
+);
