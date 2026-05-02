@@ -29,7 +29,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(originPatterns = {"http://localhost:*", "http://127.0.0.1:*"})
+@CrossOrigin(originPatterns = {"https://fsad-project-xi.vercel.app", "http://localhost:*", "http://127.0.0.1:*"})
 public class ApiController {
     private final JdbcTemplate jdbc;
     private final ObjectMapper mapper;
