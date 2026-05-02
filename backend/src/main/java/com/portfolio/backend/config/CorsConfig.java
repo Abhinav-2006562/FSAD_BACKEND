@@ -10,7 +10,13 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("https://fsad-project-xi.vercel.app")
+                .allowedOriginPatterns(
+                        "https://fsad-project-db6z.vercel.app",
+                        "https://fsad-project-xi.vercel.app",
+                        "https://*.vercel.app",
+                        "http://localhost:*",
+                        "http://127.0.0.1:*"
+                )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true)
