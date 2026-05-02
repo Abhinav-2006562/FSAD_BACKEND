@@ -7,7 +7,6 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,13 +28,6 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(originPatterns = {
-        "https://fsad-project-db6z.vercel.app",
-        "https://fsad-project-xi.vercel.app",
-        "https://*.vercel.app",
-        "http://localhost:*",
-        "http://127.0.0.1:*"
-})
 public class ApiController {
     private final JdbcTemplate jdbc;
     private final ObjectMapper mapper;
